@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tesla 特斯拉</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="gird.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<<<<<<< HEAD
+    <label class="menu_icon" for="">
+        <span class="bar1"></span>
+        <span class="bar2"></span>
+        <span class="bar3"></span>
+    </label>
     <nav>
         <a href="#" class="nav-logo">logo</a>
         <div class="nav-menu">
@@ -26,7 +32,26 @@
             <a href="#" class="nav-link">帳戶</a>
             <a href="#" class="nav-link">選單</a>
         </div>
+        <label class="close_menu"></label>
     </nav>
+    <div class="wdc_menu">
+        <div class="wdc_title">
+            <h2 class="wdc_title_h2">MENU</h2>
+        </div>
+        <ul>
+            <li class="link-tab-content"><a href="#model-s">Model S</a></li>
+            <li class="link-tab-content"><a href="#model-3">Model 3</a></li>
+            <li class="link-tab-content"><a href="#model-x">Model X</a></li>
+            <li class="link-tab-content"><a href="#model-y">Model Y</a></li>
+            <li class="link-tab-content"><a href="#cybertruck">Cybertruck</a></li>
+            <li class="link-tab-content"><a href="#powerwall">Powerwall</a></li>
+        </ul>
+        <ul>
+            <li class="link-tab-content"><a href="#">線上商店</a></li>
+            <li class="link-tab-content"><a href="#">帳戶</a></li>
+            <li class="link-tab-content"><a href="#">選單</a></li>
+        </ul>
+    </div>
     <section id="model-s">
         <div class="container">
             <div class="title">
@@ -122,15 +147,49 @@
                 <a href="#" class="btn btn-dark">現在前往</a>
                 <a href="#" class="btn btn-light">下次一定</a>
             </div>
+            <footer>
+                <p href="">Tesla © 2022  本作品參考、圖片源於特斯拉官網</p>
+                <a href="">隱私及法律條款</a>
+                <a href="">聯絡我們</a>
+                <a href="">工作機會</a>
+                <a href="">最新消息</a>
+                <a href="">地點</a>
+            </footer>
         </div>
     </section>
-    <footer>
-        <a href="">Tesla © 2022</a>
-        <a href="">隱私及法律條款</a>
-        <a href="">聯絡我們</a>
-        <a href="">工作機會</a>
-        <a href="">最新消息</a>
-        <a href="">地點</a>
-    </footer>
+    <script>
+        $(function(){
+        $(".menu_icon").on("click",function(){
+            $(this).toggleClass("active");
+            $(".bar1").toggleClass("active");
+            $(".bar2").toggleClass("active");
+            $(".bar3").toggleClass("active");
+            $(".wdc_menu").toggleClass("active");
+            $(".close_menu").toggleClass("active");
+            $(".wdc").slideToggle(450);
+        });
+        });
+       $(function(){
+        $(".close_menu").on("click",function(){
+            $(this).toggleClass("active");
+            $(".bar1").toggleClass("active");
+            $(".bar2").toggleClass("active");
+            $(".bar3").toggleClass("active");
+            $(".wdc_menu").toggleClass("active");
+            $(".wdc").slideToggle(450);
+        });
+        });
+        $(function(){
+        $(".link-tab-content").on("click",function(){
+            $(this).toggleClass("active");
+            $(".bar1").toggleClass("active");
+            $(".bar2").toggleClass("active");
+            $(".bar3").toggleClass("active");
+            $(".wdc_menu").toggleClass("active");
+            $(".close_menu").toggleClass("active");
+            $(".wdc").slideToggle(450);
+        });
+        });
+    </script>
 </body>
 </html>
